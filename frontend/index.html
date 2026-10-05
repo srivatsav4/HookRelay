@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HookRelay — reliability console</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="login" class="login hidden">
+  <form id="loginForm" class="card">
+    <h1>HookRelay</h1><p class="muted">Reliable systems aren't proven when everything works.<br>They're proven when everything fails.</p>
+    <label>Email<input id="email" value="demo@hookrelay.local" autocomplete="username"></label>
+    <label>Password<input id="password" type="password" value="demo-password" autocomplete="current-password"></label>
+    <button class="btn primary" type="submit">Sign in</button>
+    <p class="muted small">Demo credentials are prefilled (see .env). <span id="loginErr" class="bad"></span></p>
+  </form>
+</div>
+<div id="app" class="hidden">
+  <nav>
+    <div class="brand">⚡ HookRelay</div>
+    <a href="#/overview">Overview</a><a href="#/events">Events</a><a href="#/deliveries">Deliveries</a>
+    <a href="#/endpoints">Endpoints</a><a href="#/lab">Reliability Lab</a><a href="#/experiments">Experiments</a>
+    <a href="#/tenants">Tenants</a><a href="#/metrics">Metrics</a>
+    <span class="spacer"></span><span id="conn" class="badge">…</span><button id="logout" class="btn small">Sign out</button>
+  </nav>
+  <main id="view"></main>
+</div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

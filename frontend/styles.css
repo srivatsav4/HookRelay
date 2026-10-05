@@ -1,0 +1,37 @@
+:root{--bg:#0d1117;--panel:#161b22;--line:#262d38;--text:#e6edf3;--muted:#8b949e;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--info:#58a6ff;--accent:#7c8cff;
+ font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:14px}
+@media (prefers-color-scheme:light){:root{--bg:#f6f8fa;--panel:#fff;--line:#d0d7de;--text:#1f2328;--muted:#656d76}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text)}
+.hidden{display:none!important}
+nav{display:flex;align-items:center;gap:2px;padding:0 16px;height:46px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:5;overflow-x:auto}
+nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;white-space:nowrap}nav a:hover{color:var(--text)}nav a.active{color:var(--text);background:var(--bg)}
+.brand{font-weight:700;margin-right:12px}.spacer{flex:1}
+main{padding:20px;max-width:1280px;margin:0 auto}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:22px 0 8px}
+.muted{color:var(--muted)}.small{font-size:12px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+.grid{display:grid;gap:10px}.tiles{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.tile,.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}
+.tile .k{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}.tile .v{font-size:22px;font-weight:600;margin-top:2px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-weight:500;font-size:12px}
+tr:last-child td{border-bottom:0}tr.click{cursor:pointer}tr.click:hover{background:var(--bg)}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600;border:1px solid var(--line)}
+.b-DELIVERED,.b-HEALTHY,.b-PASS,.b-CLOSED,.b-COMPLETED,.ok{color:var(--ok);border-color:var(--ok)}
+.b-DEAD,.b-UNHEALTHY,.b-FAIL,.b-OPEN,.b-FAILED,.bad{color:var(--bad);border-color:var(--bad)}
+.b-RETRYING,.b-DEGRADED,.b-HALF_OPEN,.b-RECOVERING,.b-PENDING,.warn{color:var(--warn);border-color:var(--warn)}
+.b-PROCESSING,.b-QUEUED,.b-RUNNING,.b-CREATED{color:var(--info);border-color:var(--info)}
+.btn{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit}
+.btn:hover{border-color:var(--accent)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn.small{padding:3px 8px;font-size:12px}.btn.danger{color:var(--bad)}
+input,select{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:inherit}
+label{display:block;margin:10px 0;color:var(--muted);font-size:12px}label input{display:block;width:100%;margin-top:4px}
+.login{min-height:100vh;display:grid;place-items:center}.login .card{width:340px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.trace{margin:8px 0 0 8px;border-left:2px solid var(--line);padding-left:18px}
+.step{position:relative;padding:6px 0}.step::before{content:"";position:absolute;left:-25px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--line)}
+.step.ok::before{background:var(--ok)}.step.bad::before{background:var(--bad)}.step.warn::before{background:var(--warn)}.step.info::before{background:var(--info)}
+.step .t{color:var(--muted);font-size:12px;margin-left:8px}.step .d{color:var(--muted);font-size:12px}
+.exp-grid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}.exp-grid .card p{margin:6px 0 10px;color:var(--muted);font-size:12px;min-height:48px}
+.bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden}.bar>i{display:block;height:100%;background:var(--accent)}
+pre{background:var(--bg);border:1px solid var(--line);padding:10px;border-radius:6px;overflow:auto;font-size:12px}
+.notice{border:1px solid var(--warn);color:var(--warn);padding:8px 12px;border-radius:6px;margin:10px 0}
+svg text{fill:var(--muted);font-size:10px}
